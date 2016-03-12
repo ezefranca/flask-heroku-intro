@@ -9,38 +9,13 @@ app.config.update(
 )
 
 # controllers
-@app.route("/")
-def hello():
-#     exec(open("keys.py").read())
-
-# string = "Lula" # searchs this string in stream tweets
-# nb = 0 # nb seen
-
-# def found():
-# 	global nb
-# 	nb = nb+1
-# 	if ( nb > 2 ):
-# 		print("Harris is popular!")
-
-# class TWStreamer(TwythonStreamer):
-
-# 	def on_success(self, data):
-# 		if 'text' in data:
-# 			print("Found it.")
-# 			found()
-# 			print(data['text'].encode('utf-8'))
-
-# 	def on_error(self, status_code, data):
-# 		print(status_code)
-# 		self.disconnect()
-
-# try:
-# 	stream = TWStreamer(C_K, C_S, A_T, A_S)
-# 	stream.statuses.filter(track = string)
-# except KeyboardInterrupt:
-# 	exit()
-    print "teste"
-    return "Hello from Python!"
+@APP.route('/')
+def hello(name):
+    return flask.render_template('hello.html', name=name)
+#@app.route("/")
+#def hello():
+#    print "teste"
+#    return "Hello from Python!"
 
 # launch
 if __name__ == "__main__":

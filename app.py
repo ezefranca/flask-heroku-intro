@@ -10,8 +10,8 @@ app.config.update(
 
 # controllers
 @APP.route('/')
-def hello(name):
-    return flask.render_template('hello.html', name=name)
+def hello():
+    return flask.render_template('hello.html')
 #@app.route("/")
 #def hello():
 #    print "teste"

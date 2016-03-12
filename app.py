@@ -10,7 +10,8 @@ app.config.update(
 # controllers
 @app.route("/")
 def hello():
-    return "Hello from Python!"
+    return flask.render_template('hello.html')
+    #return "Hello from Python!"
 
 # launch
 if __name__ == "__main__":

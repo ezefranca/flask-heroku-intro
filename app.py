@@ -9,8 +9,8 @@ app.config.update(
 
 # controllers
 @app.route("/")
-def hello():
-    return flask.render_template('hello.html')
+def hello(name):
+    return flask.render_template('hello.html', name=name)
     #return "Hello from Python!"
 
 # launch
